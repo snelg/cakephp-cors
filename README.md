@@ -4,13 +4,14 @@ A simple plugin to add CORS headers to specified requests.
 
 In bootstrap.php, add something like
 
+```
 DispatcherFactory::add('Cors.Cors', ['routes' => [
     'ControllerClassName' => 'some_action',
     'OtherControllerClassName' => [
         'action_one' => ['origin' => 'somesite.com'],
         'action_two'],
     'ThirdController]]);
-
+```
 
 ## Installation
 

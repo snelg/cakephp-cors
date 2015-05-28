@@ -103,7 +103,7 @@ To contribute to this plugin please follow a few basic rules.
 
 ### License
 
-Copyright 2012 - 2014, Glen Sawyer and Wes King
+Copyright 2015, Glen Sawyer and Wes King
 
 Licensed under The MIT License Redistributions of files must retain the above copyright notice.
 

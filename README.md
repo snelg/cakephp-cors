@@ -12,7 +12,7 @@ To install this plugin, in your terminal type:
 TODO: Set this up for proper Composer require functionality || composer require your-name-here/Cors
 ```
 
-## Unlocking CORS for a single controller
+### Unlocking CORS for a single controller
 
 Define a single key within the routes array in the DispatcherFactory options array:
 
@@ -22,7 +22,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
-## Unlocking CORS for a controller scoped to a single action
+### Unlocking CORS for a controller scoped to a single action
 
 Define a nested array consisting of 'controller' => 'action' within the routes array in DispatcherFactor options:
 
@@ -32,7 +32,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
-## Unlocking CORS for a controller/action scoped to particular origins
+### Unlocking CORS for a controller/action scoped to particular origins
 
 ```
 DispatcherFactory::add('Cors.Cors', ['routes' => [
@@ -41,7 +41,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
-## Unlocking CORS for a controller/actions scoped to particular methods
+### Unlocking CORS for a controller/actions scoped to particular methods
 
 ```
 DispatcherFactory::add('Cors.Cors', ['routes' => [

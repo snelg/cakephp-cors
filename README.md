@@ -2,6 +2,11 @@
 
 A simple plugin to add CORS headers to specified requests.
 
+## Requirements
+
+ * CakePHP 3.0+
+ * PHP 5.4+
+
 ## Installation
 
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
@@ -62,10 +67,10 @@ For bugs and feature requests, please use the [issues](https://github.com/snelg/
 To contribute to this plugin please follow a few basic rules.
 
 * Pull requests must be send to the ```develop``` branch.
-* Contributions must follow the [CakePHP coding standard](http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html).
-* [Unit tests](http://book.cakephp.org/2.0/en/development/testing.html) are required.
+* Contributions must follow the [CakePHP coding standard](http://book.cakephp.org/3.0/en/contributing/cakephp-coding-conventions.html).
+* [Unit tests](http://book.cakephp.org/3.0/en/development/testing.html) are required.
 
-### Contributors
+### Creators
 
 [Glen Sawyer](http://www.github.com/snelg) && [Wes King](http://www.github.com/lewestopher)
 

@@ -1,5 +1,5 @@
 {
-    "name": "your-name-here/Cors",
+    "name": "snelg/cakephp-cors",
     "description": "Cors plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {

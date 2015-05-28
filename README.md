@@ -58,6 +58,33 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
+### Settings CORS within Router::connect
+
+```
+Router::scope('/', function($routes) {
+    $routes->connect('/public_api',
+    ['controller' => 'ControllerClass', 'action' => 'action_one', 'cors' => true]]
+});
+}
+```
+
+### Setting CORS within Router::connect with custom origins, methods, and headers
+
+```
+Router::scope('/', function($routes) {
+    $routes->connect('/public_api', [
+        'controller' => 'ControllerClass',
+        'action' => 'action_one',
+        'cors' => [
+            'origin' => 'your_origin.com',
+            'methods' => ['PUT', 'DELETE'],
+            'headers' => []
+        ]
+    ]);
+});
+}
+```
+
 ### Support
 
 For bugs and feature requests, please use the [issues](https://github.com/snelg/cakephp-cors/issues) section of this repository.

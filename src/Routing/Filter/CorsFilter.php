@@ -13,7 +13,7 @@ class CorsFilter extends DispatcherFilter {
 
         if (empty($handledRoutes[$controller])) {
             //Might be numeric-keyed single entry
-            if (in_array($controller, $handledRoutes)) {
+            if (is_array($handledRoutes) && in_array($controller, $handledRoutes)) {
                 $handledRoutes[$controller] = ['*'];
             } else {
                 return;
@@ -31,7 +31,7 @@ class CorsFilter extends DispatcherFilter {
             //Not this action
             return;
         }
-        
+
         $origin = '*';
         $methods = [];
         $headers = [];

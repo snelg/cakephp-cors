@@ -2,6 +2,11 @@
 
 A simple plugin to add CORS headers to specified requests.
 
+## Requirements
+
+ * CakePHP 3.0+
+ * PHP 5.4+
+
 ## Installation
 
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
@@ -32,7 +37,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
-### Unlocking CORS for a controller/action scoped to particular origins
+### Scoping CORS to particular origins
 
 ```
 DispatcherFactory::add('Cors.Cors', ['routes' => [
@@ -41,7 +46,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
-### Unlocking CORS for a controller/actions scoped to particular methods
+### Scoping CORS to particular methods
 
 ```
 DispatcherFactory::add('Cors.Cors', ['routes' => [
@@ -52,3 +57,26 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
        ]
 ]]);
 ```
+
+### Support
+
+For bugs and feature requests, please use the [issues](https://github.com/snelg/cakephp-cors/issues) section of this repository.
+
+### Contributing
+
+To contribute to this plugin please follow a few basic rules.
+
+* Pull requests must be send to the ```develop``` branch.
+* Contributions must follow the [CakePHP coding standard](http://book.cakephp.org/3.0/en/contributing/cakephp-coding-conventions.html).
+* [Unit tests](http://book.cakephp.org/3.0/en/development/testing.html) are required.
+
+### Creators
+
+[Glen Sawyer](http://www.github.com/snelg) && [Wes King](http://www.github.com/lewestopher)
+
+### License
+
+Copyright 2012 - 2014, Glen Sawyer and Wes King
+
+Licensed under The MIT License Redistributions of files must retain the above copyright notice.
+

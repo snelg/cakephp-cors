@@ -58,7 +58,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 ]]);
 ```
 
-### Settings CORS within Router::connect
+### Setting CORS within Router::connect
 
 ```
 Router::scope('/', function($routes) {
@@ -68,7 +68,7 @@ Router::scope('/', function($routes) {
 }
 ```
 
-### Setting CORS within Router::connect with custom origins, methods, and headers
+### Router::connect with custom origins, methods, and headers
 
 ```
 Router::scope('/', function($routes) {

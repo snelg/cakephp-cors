@@ -16,13 +16,8 @@ class CorsFilter extends DispatcherFilter
 
         // Conditional to run our CORS headers on response if set in Router::connect()
         if ($corsOptions) {
-            // Set our arguments based on defaults vs. provided
-            $origin = (!empty($corsOptions['origin'])) ? $corsOptions['origin'] : '*';
-            $methods = (!empty($corsOptions['methods'])) ? $corsOptions['methods'] : [];
-            $headers = (!empty($corsOptions['headers'])) ? $corsOptions['headers'] : [];
-
-            // Set the CORS headers on our response based on input arguments
-            return $e->data['response']->cors($request, $origin, $methods, $headers);
+            //Override dispatcher config with Router-specified options
+            $handledRoutes[$controller][$action] = $corsOptions;
         }
 
         if (empty($handledRoutes[$controller])) {

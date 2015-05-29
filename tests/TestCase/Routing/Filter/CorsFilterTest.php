@@ -13,13 +13,8 @@
  */
 namespace Cake\Test\TestCase\Routing\Filter;
 
-use Cake\Core\App;
-use Cake\Core\Configure;
-use Cake\Core\Plugin;
 use Cake\Event\Event;
 use Cake\Network\Request;
-use Cake\Network\Response;
-use Cake\Routing\Router;
 use Cake\TestSuite\TestCase;
 use Cors\Routing\Filter\CorsFilter;
 
@@ -139,5 +134,31 @@ class CorsFilterTest extends TestCase
         $headers = $this->response->header();
         $this->assertEquals('test.org', $headers['Access-Control-Allow-Origin']);
         $this->assertEquals('PUT,DELETE', $headers['Access-Control-Allow-Methods']);
+    }
+
+    public function testRequestParamsTrue()
+    {
+        $this->request->addParams(['cors' => true]);
+
+        $filter = new CorsFilter();
+        $filter->beforeDispatch($this->event);
+
+        $headers = $this->response->header();
+        $this->assertEquals('*', $headers['Access-Control-Allow-Origin']);
+    }
+
+    public function testRouterParamsSpecified()
+    {
+        $this->request->addParams([
+            'cors' => [
+                'origin' => 'test.org',
+                'methods' => ['PUT', 'DELETE']]]);
+
+        $filter = new CorsFilter();
+        $filter->beforeDispatch($this->event);
+
+        $headers = $this->response->header();
+        $this->assertEquals('test.org', $headers['Access-Control-Allow-Origin']);
+        $this->assertEquals('PUT, DELETE', $headers['Access-Control-Allow-Methods']);
     }
 }

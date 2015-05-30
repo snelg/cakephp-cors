@@ -65,4 +65,9 @@ class CorsFilter extends DispatcherFilter
         
         $e->data['response']->cors($request, $origin, $methods, $headers);
     }
+
+    protected function _controllerize($controllerName)
+    {
+
+    }
 }

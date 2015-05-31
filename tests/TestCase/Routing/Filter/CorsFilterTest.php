@@ -132,7 +132,10 @@ class CorsFilterTest extends TestCase
             'Fun' => [
                 'times' => [
                     'origin' => 'test.org',
-                    'methods' => 'PUT,DELETE']]]]);
+                    'methods' => 'PUT,DELETE'
+                ]
+            ]
+        ]]);
 
         $filter->beforeDispatch($this->event);
 

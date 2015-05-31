@@ -14,7 +14,7 @@ class CorsFilter extends DispatcherFilter
      * Instantiates middleware via CakePHP events to set CORS headers on the response object
      *
      * @param Event $e The event passed into the Filter
-     * @return null
+     * @return void
      */
     public function beforeDispatch(Event $e)
     {
@@ -71,4 +71,3 @@ class CorsFilter extends DispatcherFilter
         $e->data['response']->cors($request, $origin, $methods, $headers);
     }
 }
-

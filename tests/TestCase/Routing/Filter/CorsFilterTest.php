@@ -165,3 +165,4 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('PUT, DELETE', $headers['Access-Control-Allow-Methods']);
     }
 }
+

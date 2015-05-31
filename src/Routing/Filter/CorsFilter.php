@@ -4,8 +4,17 @@ namespace Cors\Routing\Filter;
 use Cake\Event\Event;
 use Cake\Routing\DispatcherFilter;
 
+/**
+ * Class CorsFilter
+ * @package Cors\Routing\Filter
+ */
 class CorsFilter extends DispatcherFilter
 {
+    /**
+     * Instantiates middleware via CakePHP events to set CORS headers on the response object
+     *
+     * @param Event $e
+     */
     public function beforeDispatch(Event $e)
     {
         $request = $e->data['request'];
@@ -59,10 +68,5 @@ class CorsFilter extends DispatcherFilter
         }
 
         $e->data['response']->cors($request, $origin, $methods, $headers);
-    }
-
-    protected function _controllerize($controllerName)
-    {
-
     }
 }

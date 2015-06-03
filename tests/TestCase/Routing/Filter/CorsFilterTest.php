@@ -48,11 +48,7 @@ class CorsFilterTest extends TestCase
     {
         parent::tearDown();
     }
-
-
-    /**
-     * @covers CorsFilter::beforeFilter
-     */
+    
     public function testNoController()
     {
         $filter = new CorsFilter();

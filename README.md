@@ -20,7 +20,7 @@ You can install this plugin into your CakePHP application using [composer](http:
 To install this plugin, in your terminal type:
 
 ```
-TODO: Set this up for proper Composer require functionality || composer require your-name-here/Cors
+composer require snelg/cakephp-cors
 ```
 
 ### Unlocking CORS for a single controller

@@ -48,8 +48,7 @@ class CorsFilterTest extends TestCase
     {
         parent::tearDown();
     }
-
-
+    
     public function testNoController()
     {
         $filter = new CorsFilter();
@@ -60,6 +59,9 @@ class CorsFilterTest extends TestCase
         $this->assertArrayNotHasKey('Access-Control-Allow-Origin', $headers);
     }
 
+    /**
+     *
+     */
     public function testControllerOnly()
     {
         $filter = new CorsFilter(['routes' => ['Fun']]);
@@ -70,6 +72,9 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('*', $headers['Access-Control-Allow-Origin']);
     }
 
+    /**
+     *
+     */
     public function testSingleAction()
     {
         $filter = new CorsFilter(['routes' => ['Fun' => 'times']]);
@@ -80,6 +85,9 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('*', $headers['Access-Control-Allow-Origin']);
     }
 
+    /**
+     *
+     */
     public function testMultipleAction()
     {
         $filter = new CorsFilter(['routes' => [
@@ -93,6 +101,9 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('*', $headers['Access-Control-Allow-Origin']);
     }
 
+    /**
+     *
+     */
     public function testScopedOrigin()
     {
         $filter = new CorsFilter(['routes' => [
@@ -107,6 +118,9 @@ class CorsFilterTest extends TestCase
         $this->assertArrayNotHasKey('Access-Control-Allow-Methods', $headers);
     }
 
+    /**
+     *
+     */
     public function testScopedMethods()
     {
         $filter = new CorsFilter(['routes' => [
@@ -121,13 +135,19 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('PUT,DELETE', $headers['Access-Control-Allow-Methods']);
     }
 
+    /**
+     *
+     */
     public function testScopedOriginAndMethods()
     {
         $filter = new CorsFilter(['routes' => [
             'Fun' => [
                 'times' => [
                     'origin' => 'test.org',
-                    'methods' => 'PUT,DELETE']]]]);
+                    'methods' => 'PUT,DELETE'
+                ]
+            ]
+        ]]);
 
         $filter->beforeDispatch($this->event);
 
@@ -136,6 +156,9 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('PUT,DELETE', $headers['Access-Control-Allow-Methods']);
     }
 
+    /**
+     *
+     */
     public function testRequestParamsTrue()
     {
         $this->request->addParams(['cors' => true]);
@@ -147,6 +170,9 @@ class CorsFilterTest extends TestCase
         $this->assertEquals('*', $headers['Access-Control-Allow-Origin']);
     }
 
+    /**
+     *
+     */
     public function testRouterParamsSpecified()
     {
         $this->request->addParams([

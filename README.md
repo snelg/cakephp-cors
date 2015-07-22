@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/LeWestopher/cakephp-cors.svg?branch=master)](https://travis-ci.org/LeWestopher/cakephp-cors)
 [![Coverage](https://img.shields.io/coveralls/LeWestopher/cakephp-cors/master.svg)](https://travis-ci.org/snelg/cakephp-cors)
-[![Downloads](https://img.shields.io/github/downloads/snelg/cakephp-cors/latest/total.svg)](https://travis-ci.org/snelg/cakephp-cors)
+[![Downloads](https://img.shields.io/packagist/dt/snelg/cakephp-cors.svg?style=flat-square)](https://packagist.org/packages/snelg/cakephp-cors)
 
 
 

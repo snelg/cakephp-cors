@@ -99,7 +99,6 @@ For bugs and feature requests, please use the [issues](https://github.com/snelg/
 
 To contribute to this plugin please follow a few basic rules.
 
-* Pull requests must be send to the ```develop``` branch.
 * Contributions must follow the [CakePHP coding standard](http://book.cakephp.org/3.0/en/contributing/cakephp-coding-conventions.html).
 * [Unit tests](http://book.cakephp.org/3.0/en/development/testing.html) are required.
 

@@ -69,5 +69,9 @@ class CorsFilter extends DispatcherFilter
         }
 
         $e->data['response']->cors($request, $origin, $methods, $headers);
+        
+        if ($request->is('options')) {
+            return $e->data['response'];
+        }
     }
 }

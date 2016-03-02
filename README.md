@@ -27,7 +27,7 @@ composer require snelg/cakephp-cors:dev-master
 
 Define a single key within the routes array in the DispatcherFactory options array:
 
-```
+```php
 DispatcherFactory::add('Cors.Cors', ['routes' => [
     'ControllerClassName'
 ]]);
@@ -37,7 +37,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 
 Define a nested array consisting of 'controller' => 'action' within the routes array in DispatcherFactor options:
 
-```
+```php
 DispatcherFactory::add('Cors.Cors', ['routes' => [
     'ControllerClassName' => 'some_action',
 ]]);
@@ -45,7 +45,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 
 ### Scoping CORS to particular origins
 
-```
+```php
 DispatcherFactory::add('Cors.Cors', ['routes' => [
     'ControllerClassName' => [
         'action_one' => ['origin' => 'somesite.com']
@@ -54,7 +54,7 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 
 ### Scoping CORS to particular methods
 
-```
+```php
 DispatcherFactory::add('Cors.Cors', ['routes' => [
    'ControllerClassName' => [
        'action_one' => [
@@ -66,8 +66,8 @@ DispatcherFactory::add('Cors.Cors', ['routes' => [
 
 ### Setting CORS within Router::connect
 
-```
-Router::scope('/', function($routes) {
+```php
+Router::scope('/', function ($routes) {
     $routes->connect('/public_api',
     ['controller' => 'ControllerClass', 'action' => 'action_one', 'cors' => true]]
 });
@@ -76,8 +76,8 @@ Router::scope('/', function($routes) {
 
 ### Router::connect with custom origins, methods, and headers
 
-```
-Router::scope('/', function($routes) {
+```php
+Router::scope('/', function ($routes) {
     $routes->connect('/public_api', [
         'controller' => 'ControllerClass',
         'action' => 'action_one',

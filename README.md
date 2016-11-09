@@ -1,4 +1,4 @@
-# CORS plugin for CakePHP 3.x
+# CORS plugin for CakePHP 3.0-3.2
 
 [![Build Status](https://travis-ci.org/LeWestopher/cakephp-cors.svg?branch=master)](https://travis-ci.org/LeWestopher/cakephp-cors)
 [![Coverage](https://img.shields.io/coveralls/LeWestopher/cakephp-cors/master.svg)](https://travis-ci.org/snelg/cakephp-cors)
@@ -8,9 +8,11 @@
 
 A simple plugin to add CORS headers to specified requests.
 
+#For CakePHP 3.3+, use https://github.com/ozee31/cakephp-cors
+
 ## Requirements
 
- * CakePHP 3.0+
+ * CakePHP 3.0-3.2
  * PHP 5.4+
 
 ## Installation

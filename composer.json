@@ -4,8 +4,9 @@
     "type": "cakephp-plugin",
     "require": {
         "php": ">=5.4.16",
-        "cakephp/cakephp": "~3.0"
+        "cakephp/cakephp": ">=3.0 <3.3"
     },
+    "abandoned": "ozee31/cakephp-cors",
     "require-dev": {
         "phpunit/phpunit": "*"
     },
